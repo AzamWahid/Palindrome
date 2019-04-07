@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<h1>
+    Palindrome Checking
+</h1>
+<input type="text" id = 'txt'>
+<button type="button" onclick="Checking()">Check</button>
+<p id="p1"></p>
+
+
+    
+</body>
+<script>
+    
+
+        function Checking ()
+      {
+        var val = document.getElementById('txt').value
+        var chk = ''
+        function palindrome (str) 
+        {
+            return str === str.split("").reverse().join("");
+        }
+        chk = palindrome(val)
+       console.log(chk)
+     
+        
+        if(chk == true)
+        {
+           document.getElementById('p1').innerHTML = 'Yeah This is a Palindrome word'
+        }
+        else
+        {
+            document.getElementById('p1').innerHTML = 'sorry This is not a Palindrome word'
+        }
+      }
+        </script>
+</html>
